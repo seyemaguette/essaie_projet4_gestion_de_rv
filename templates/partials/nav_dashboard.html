@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="d-flex flex-column">
+   <div class="w-25 d-flex flex-column">
+            
+               <div >
+                <img class="w-100"src="{% static 'image/images_rv.png'%}" alt="">
+               </div>
+            
+            <section class="w-100">
+              <div class="text-center mb-3">
+                <a   class="  h2  " href="{% url 'index'%}" style="color:rgb(35, 190, 241) ;text-decoration: none;">Dashboard</a>
+            </div>
+                <ul style=" background-color: rgb(35, 190, 241);border-radius: 2%;" class="navbar-nav  d-flex flex-column  ">
+                <li class=" container-fluid my-4  d-flex justify-content-center ">
+                    <img style="height: 120px;width: 100px;" class="nav-link text-white   rounded-circle"  src="{% static 'image/profil.jpg'%}" alt="profile">
+                </li>
+                <li   class=" container-fluid ml-2">
+                    <img src="{% static 'image/home.png'%}" alt="">
+                    <a class="nav-link text-white" href="#">Mes rendez-vous</a>
+                </li>
+                <li  class=" container-fluid ml-2">
+                    <a class="nav-link text-white" href="#">Mes patients</a>
+                </li>
+                <li  class=" container-fluid ml-2" style="margin-bottom: 50px;">
+                    <a class="nav-link text-white" href="#">Mon compte</a>
+                </li>
+                <li class=" container-fluid ml-2">
+                    <a class="nav-link text-white" href="#">Connecter</a>
+                </li>
+                </ul>
+                </div>
+    </section>
+  </div> 
+</body>
+</html>
