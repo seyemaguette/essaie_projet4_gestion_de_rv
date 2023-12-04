@@ -6,8 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li a:hover{
+            color:rgb(4, 96, 96) !important;
+        }
+        #dash{
+            color:rgb(35, 190, 241) !important;
+            text-decoration: none;
+            font-size: 100%;
+        }
+        #dash:hover{
+            color:white !important;
+            background-color:rgb(35, 190, 241) ;
+        }
+    </style>
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column ">
    <div class="w-25 d-flex flex-column">
             
                <div >
@@ -16,24 +30,26 @@
             
             <section class="w-100">
               <div class="text-center mb-3">
-                <a   class="  h2  " href="{% url 'index'%}" style="color:rgb(35, 190, 241) ;text-decoration: none;">Dashboard</a>
+                <a   id="dash" href="{% url 'index'%}" >Dashboard</a>
             </div>
                 <ul style=" background-color: rgb(35, 190, 241);border-radius: 2%;" class="navbar-nav  d-flex flex-column  ">
                 <li class=" container-fluid my-4  d-flex justify-content-center ">
                     <img style="height: 120px;width: 100px;" class="nav-link text-white   rounded-circle"  src="{% static 'image/profil.jpg'%}" alt="profile">
                 </li>
+                <li  class=" container-fluid ml-2">
+                    <a class="nav-link text-white" href="{% url 'index'%}">Acceuil</a>
+                </li>
                 <li   class=" container-fluid ml-2">
-                    <img src="{% static 'image/home.png'%}" alt="">
                     <a class="nav-link text-white" href="#">Mes rendez-vous</a>
                 </li>
                 <li  class=" container-fluid ml-2">
                     <a class="nav-link text-white" href="#">Mes patients</a>
                 </li>
                 <li  class=" container-fluid ml-2" style="margin-bottom: 50px;">
-                    <a class="nav-link text-white" href="#">Mon compte</a>
+                    <a class="nav-link text-white" href="{% url 'mon_compte'%}">Mon compte</a>
                 </li>
                 <li class=" container-fluid ml-2">
-                    <a class="nav-link text-white" href="#">Connecter</a>
+                    <a class="nav-link text-white" href="#" >Connecter</a>
                 </li>
                 </ul>
                 </div>

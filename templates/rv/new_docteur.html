@@ -1,0 +1,27 @@
+{% extends 'pages/base.html' %}
+
+{% block container %}
+
+{% load widget_tweaks %}
+<div class="container ">
+    <div class=" col-md  m-5">
+        <form method="POST" enctype="multipart/form-data" data-ajax="false">
+            {% csrf_token %}
+
+            {% for field in form.visible_fields %}
+            <div class="form-group bg-light">
+              <label class=" text-info" for="{{ field.id_for_label }}">{{ field.label }}</label>
+              {{ field|add_class:'form-control ' }}
+              
+               
+              {% endfor %}
+            </div>
+         
+      
+          <input class="btn btn-outline-info mt-2" type="submit" value="creer">
+        </form> 
+    </div>
+</div>
+    
+{% endblock container %}
+    

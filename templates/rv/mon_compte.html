@@ -1,0 +1,46 @@
+{% extends './base.html' %}
+
+{% block title %}
+    Mon compte
+{% endblock title %}
+    
+
+{% block container %}
+<div class="jumbotron jumbotron-fluid mt-5 ml-4">
+    <div class="container">
+      <h1 class="display-4">Rendez-Vous</h1>
+      <p class="lead">La gestion de rendez-vous , permettra aux utilisateurs de prendre et de gérer leurs rendez-vous.</p>
+    </div>
+  </div>
+<section>
+    <div class="card shadow ">
+        {% if  Docteur.photo_profil %}
+        <img class="card-img-top" src="{{ Docteur.photo_profil.url}}" alt="Card  cap" style="height:150px ;">
+        {% endif %}
+          <div class="card-body overflow-auto" style="height: 200px;">  
+              <li class=" h5 card-title">{{Docteur.addresse}}</li>
+              <p class="card-text text-info">{{Docteur.tel}}</p>
+              <p class="card-text"> {{Docteur.email}} </p>
+             </div>
+      </div> 
+</section>
+{% endblock container %}
+    
+{% comment %} <!-- <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+   <div class="form-group">
+    {{form.media}}
+    <p> {{form.photo_profil.label}}</p>
+    {% if Docteur.photo_profil %}
+    <img src="{{ Docteur.photo_profil.url }}" />
+    {% endif %}
+    {{form.photo_profil}}
+    <p> {{form.addresse.label}}</p>
+    {{form.addresse}}
+    <p> {{form.tel.label}}</p>
+    {{form.tel}}
+    <p> {{form.email.label}}</p>
+    {{form.email}}
+   </div> 
+   <button type="submit" class="btn btn-primary">Modifier</button>
+</form> --> {% endcomment %}
